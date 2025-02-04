@@ -8,7 +8,7 @@ LIBS=
 INC_DIR=include/
 
 LIBFLAGS=$(addprefix -l,$(LIBS))
-INCLUDE_FLAGS=$(addprefix -L,$(INC_DIR))
+INCLUDE_FLAGS=$(addprefix -I,$(INC_DIR))
 
 include ./src/Makefile
 
