@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 import sys
 
 if not getattr(sys, "frozen", False):

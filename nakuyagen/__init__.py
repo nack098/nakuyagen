@@ -27,14 +27,14 @@ def args_parse(argv: list[str] | None) -> Result[str | BaseException]:
         using_select = True
         args.lang = [input("Select Lanugage: ").strip().lower()]
 
-    if len(args.lang) != 1:
+    if len(args.lang) < 1:
         return Result(
             argparse.ArgumentError(
                 argument=None, message="Only one choice can be choose at a time"
             )
         )
 
-    return Result(args.lang[0])
+    return Result(args.lang)
 
 
 def generate(lang: str) -> None | BaseException:
